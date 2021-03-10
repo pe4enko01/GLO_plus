@@ -4,7 +4,7 @@ let body = document.getElementsByTagName("body");
 console.log("🚀 ~ file: script.js ~ line 84 ~ body", body);
 
 function DomElement(){
-    this.selector = "#block"; 
+    this.selector = ".block"; 
     this.height = 0; 
     this.width = 0; 
     this.bg = 0; 
@@ -15,7 +15,7 @@ function DomElement(){
             let newDiv = document.createElement("div");
             body[0].prepend(newDiv);
             newDiv.innerHTML = "Привет!";
-            newDiv.classList.add(this.selector);
+            newDiv.classList.add(this.selector.slice(1));
             newDiv.style.width="100px";
             newDiv.style.height="100px";
             newDiv.style.background ="red";
@@ -25,7 +25,7 @@ function DomElement(){
             let newDiv = document.createElement("div");
             body[0].prepend(newDiv);
             newDiv.innerHTML = "Привет!";
-            newDiv.id = this.selector ;
+            newDiv.id = this.selector.slice(1) ;
             newDiv.style.width="100px";
             newDiv.style.height="100px";
             newDiv.style.background ="blue";
